@@ -19,7 +19,7 @@ client.connect((err) => {
 })
 
 // Serve javascript app
-app.get('/js/client.js', browserify(path.join(__dirname, 'index.js')))
+app.get('/js/client.js', browserify(path.join(__dirname, 'client.js')))
 
 // Favicons
 app.use(favicon(path.join(__dirname, 'public', 'favicon.png')))
@@ -31,7 +31,7 @@ app.use(express.static('public'))
 app.use(bodyParser.json())
 
 // React router urls
-const urls = ['/some', '/react-router', '/urls']
+const urls = ['/', '/submit']
 
 urls.forEach((route) => {
   app.get(route, (req, res) => {

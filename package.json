@@ -2,7 +2,7 @@
   "name": "boiler-postgres",
   "version": "0.1.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "tape test/*.js && standard",
     "start": "node server.js"
   },
   "browserify": {
@@ -13,6 +13,7 @@
   },
   "private": true,
   "dependencies": {
+    "babel-core": "^6.26.0",
     "babel-preset-es2015": "*",
     "babel-preset-react": "*",
     "babelify": "*",
@@ -29,6 +30,8 @@
     "react-dom": "*",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
-    "serve-favicon": "^2.4.3"
+    "serve-favicon": "^2.4.3",
+    "standard": "^11.0.0",
+    "tape": "^4.9.0"
   }
 }

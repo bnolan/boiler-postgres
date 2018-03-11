@@ -18,6 +18,11 @@ export default class App extends Component {
 
         <hr />
 
+        <ul>
+          <Link to='/'>Home</Link>
+          <Link to='/submit'>Submit</Link>
+        </ul>
+
         <Switch>
           <Route exact key='recent' path='/' component={Home} />
           <Route key='submit' path='/submit' component={Submit} />
@@ -26,7 +31,7 @@ export default class App extends Component {
         <hr />
 
         <footer>
-          lol footer
+          Footer ⛄
         </footer>
       </div>
     )
