@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "scripts": {
     "test": "tape test/*.js && standard",
-    "start": "node server.js"
+    "start": "node server.js",
+    "migrate": "cat server/migrations.sql | psql -v ON_ERROR_STOP=1 boiler-postgres"
   },
   "browserify": {
     "transform": [
